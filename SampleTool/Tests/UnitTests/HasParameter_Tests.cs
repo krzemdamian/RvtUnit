@@ -38,5 +38,12 @@ namespace SampleTool.Tests.UnitTests
 			IParameterHelper parameterHelper = new ParameterHelper(document);
 			Assert.That(parameterHelper.HasParameter("Project Name"), Iz.True);
 		}
+
+        [Test]
+        public void MySuperNewTest()
+        {
+            Assert.Fail("This is actualy my second test in the word!\n" +
+                "This time it's performed in REVIT!!!");
+        }
 	}
 }

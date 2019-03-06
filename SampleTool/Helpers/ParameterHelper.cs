@@ -74,13 +74,14 @@ namespace SampleTool.Helper
 			{
 				return null;
 			}
-			Parameter theParam = pInfo.get_Parameter(parameterName);
-			if (null == theParam)
+            
+            ParameterMap theParamMap = pInfo.ParametersMap;
+            if (!theParamMap.Contains(parameterName))
 			{
 				return null;
 			}
 
-			return theParam;
+			return theParamMap.get_Item(parameterName);
 		}
 	}
 }

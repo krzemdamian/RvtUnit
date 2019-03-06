@@ -51,6 +51,7 @@ namespace rvtUnit.Commands
       // ======================================================== FIELDS === //
 
       private Document _activeDoc;
+      public ExternalCommandData ExternalCommandData { get; set; }
 
       // ==================================================== PROPERTIES === //
 
@@ -63,7 +64,7 @@ namespace rvtUnit.Commands
       /// <param name="message">Error message can be returned by external command.</param>
       /// <param name="elements">Element set could be used for transferring elements between external command and Autodesk Revit.</param>
       /// <returns>
-      /// Result tells whether the excution fail, succeed or was canceled by user. If not succeed, Autodesk Revit should undo any changes made by the external command. 
+      /// Result tells whether the excution fail, succeed or was canceled by user. If not succeed, Autodesk Revit should undo any changes made by the external command.
       /// </returns>
       public IExternalCommand.Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
       {
@@ -84,18 +85,20 @@ namespace rvtUnit.Commands
       /// <param name="message">Error message can be returned by external command.</param>
       /// <param name="elements">Element set could be used for transferring elements between external command and Autodesk Revit.</param>
       /// <returns>
-      /// Result tells whether the excution fail, succeed or was canceled by user. If not succeed, Autodesk Revit should undo any changes made by the external command. 
+      /// Result tells whether the excution fail, succeed or was canceled by user. If not succeed, Autodesk Revit should undo any changes made by the external command.
       /// </returns>
       public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
       {
          _activeDoc = commandData.Application.ActiveUIDocument.Document;
 
+
 		 GeneralHelper.ActiveUIDocument = commandData.Application.ActiveUIDocument;
+            GeneralHelper.ExternalCommandData = commandData;
 
          DoAction();
 
          // Return Cancelled so that this command is not recorded as modifying Document:
-         return Result.Cancelled;
+         return Result.Succeeded;
       }
 
 #endif

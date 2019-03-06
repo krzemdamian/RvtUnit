@@ -14,6 +14,8 @@ using System.Reflection;
 using rvtUnit.Helpers;
 using System.Windows.Media;
 using System.Windows;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
 
 namespace rvtUnit.Controls
 {
@@ -75,6 +77,14 @@ namespace rvtUnit.Controls
                theAsm = Assembly.LoadFrom(targetFile);
             }
          }
+
+         /*
+         // DK: if assembly is still null, try load RevitAPI
+         if (theAsm == null)
+         {
+            theAsm = Assembly.Load("Autodesk.Revit.DB");
+         }
+         */
 
 #if DEBUG
          // Log wether the assembly was found

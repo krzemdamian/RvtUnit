@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rvtUnit", "rvtUnit\rvtUnit.csproj", "{57F89DD4-FB6A-44C2-BB8E-EEE35896F70A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTool", "SampleTool\SampleTool.csproj", "{8E1F6CE1-CBE7-4CCE-B1AF-9E1E4032F07E}"
@@ -28,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70611D74-89A3-46E4-8B6F-F6C02C75B1DA}
 	EndGlobalSection
 EndGlobal

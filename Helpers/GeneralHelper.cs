@@ -48,6 +48,7 @@ namespace Helpers
 		}
 
 		public static UIDocument ActiveUIDocument { get; set; }
+        public static ExternalCommandData ExternalCommandData { get; set; }
 
 		/// <summary>
 		/// Finds the Revit window handle.
