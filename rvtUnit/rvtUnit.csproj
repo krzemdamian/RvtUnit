@@ -90,6 +90,7 @@
       <DependentUpon>TestResultViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TestResultViewerViewModel.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Helpers\VisibilityConverter.cs" />
     <Compile Include="Models\TestableDll.cs" />
     <Compile Include="Models\Test.cs" />
