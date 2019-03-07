@@ -34,5 +34,10 @@ namespace rvtUnit.Controls
         {
             base.OnSourceInitialized(e);
         }
+
+        private void OnCloseExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
