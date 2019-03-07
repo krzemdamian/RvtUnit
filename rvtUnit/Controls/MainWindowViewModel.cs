@@ -144,7 +144,16 @@ namespace rvtUnit.Controls
 				"Moq.dll", 
 				"GalaSoft.MvvmLight.dll", 
 				"Castle.DynamicProxy2.dll", 
-				"Castle.Core.dll" 
+				"Castle.Core.dll",
+				"Castle.Windsor.dll", 
+				"IronPython.dll", 
+				"IronPython.Modules.dll", 
+				"IronPython.SQLite.dll", 
+				"IronPython.Wpf.dll", 
+				"Microsoft.Dynamic.dll", 
+				"Microsoft.Scripting.dll", 
+				"Microsoft.Scripting.Metadata.dll", 
+				"System.Windows.Interactivity.dll" 
 			};
          // Get a list of DLL's that potentially contain tests 
          foreach (string dll in System.IO.Directory.GetFiles(path, "*" + ".dll"))
