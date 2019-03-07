@@ -10,6 +10,7 @@
     </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Command="Close" Key="Esc" />
+        <KeyBinding Command="Close" Key="Return" />
     </Window.InputBindings>
     <Grid>
       <Grid.RowDefinitions>
