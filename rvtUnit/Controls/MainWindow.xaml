@@ -4,12 +4,18 @@
         x:Name="view"
         ShowInTaskbar="False"
         Title="Integration Testing" Height="600" Width="460">
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" Executed="OnCloseExecuted" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="Close" Key="Esc" />
+    </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        
+
         <ListView Grid.Row="0" Margin="5" ItemsSource="{Binding DLLs}" >
             <ListView.Resources>
                 <DataTemplate x:Key="buttonColumn" >
@@ -55,7 +61,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
+
         <Button Margin="5" Grid.Row="1" Content="Run All Tests" Command="{Binding RunAllTestsCommand}" />
     </Grid>
 </Window>
