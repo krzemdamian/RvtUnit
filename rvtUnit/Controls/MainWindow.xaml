@@ -61,7 +61,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-
         <Button Margin="5" Grid.Row="1" Content="Run All Tests" Command="{Binding RunAllTestsCommand}" />
     </Grid>
 </Window>
