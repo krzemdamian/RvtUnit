@@ -259,11 +259,11 @@ namespace rvtUnit.Controls
       {
          File.Delete(Path.Combine(Path.GetDirectoryName(path), "rvtUnit.dll"));
          File.Delete(Path.Combine(Path.GetDirectoryName(path), "Moq.dll"));
-         File.Delete(Path.Combine(Path.GetDirectoryName(path), "Castle.Core.dll"));
+         try { File.Delete(Path.Combine(Path.GetDirectoryName(path), "Castle.Core.dll")); } catch { }
          File.Delete(Path.Combine(Path.GetDirectoryName(path), "TechTalk.SpecFlow.dll"));
          File.Copy(Assembly.GetExecutingAssembly().Location, Path.Combine(Path.GetDirectoryName(path), "rvtUnit.dll"));
          File.WriteAllBytes(Path.Combine(Path.GetDirectoryName(path), "Moq.dll"), Resources.Resources.Moq);
-         File.WriteAllBytes(Path.Combine(Path.GetDirectoryName(path), "Castle.Core.dll"), Resources.Resources.Castle_Core);
+         try { File.WriteAllBytes(Path.Combine(Path.GetDirectoryName(path), "Castle.Core.dll"), Resources.Resources.Castle_Core); } catch { }
          File.WriteAllBytes(Path.Combine(Path.GetDirectoryName(path), "TechTalk.SpecFlow.dll"), Resources.Resources.TechTalk_SpecFlow);
       }
 
