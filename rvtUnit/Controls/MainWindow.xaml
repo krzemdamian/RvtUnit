@@ -3,7 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Name="view"
         ShowInTaskbar="False"
-        Title="Integration Testing" Height="600" Width="460">
+        Title="Integration Testing" Height="600" Width="460"
+        WindowStartupLocation="CenterScreen">
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" Executed="OnCloseExecuted" />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="Close" Key="Esc" />
+    </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -55,6 +62,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Margin="5" Grid.Row="1" Content="Run All Tests" Command="{Binding RunAllTestsCommand}" />
+        <Button Margin="5" Grid.Row="1" Content="Run All Tests" Command="{Binding RunAllTestsCommand}" IsDefault="True" />
     </Grid>
 </Window>

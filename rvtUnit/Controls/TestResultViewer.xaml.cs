@@ -31,25 +31,30 @@ using System.Windows.Shapes;
 
 namespace rvtUnit.Controls
 {
-   /// <summary>
-   /// Interaction logic for TestResultViewer.xaml
-   /// </summary>
-   public partial class TestResultViewer : Window
-   {
-      public TestResultViewer(TestResultViewerViewModel vm)
-      {
-         InitializeComponent();
+    /// <summary>
+    /// Interaction logic for TestResultViewer.xaml
+    /// </summary>
+    public partial class TestResultViewer : Window
+    {
+        public TestResultViewer(TestResultViewerViewModel vm)
+        {
+            InitializeComponent();
 
-         this.DataContext = vm;
-      }
+            this.DataContext = vm;
+        }
 
-      /// <summary>
-      /// 
-      /// </summary>
-      /// <param name="e"></param>
-      protected override void OnSourceInitialized(EventArgs e)
-      {
-         base.OnSourceInitialized(e);
-      }
-   }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+        }
+
+        private void OnCloseExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
 }
