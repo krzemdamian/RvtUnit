@@ -4,12 +4,6 @@
         x:Name="view"
         ShowInTaskbar="False"
         Title="Integration Testing" Height="600" Width="460">
-    <Window.CommandBindings>
-        <CommandBinding Command="Close" Executed="OnCloseExecuted" />
-    </Window.CommandBindings>
-    <Window.InputBindings>
-        <KeyBinding Command="Close" Key="Esc" />
-    </Window.InputBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
